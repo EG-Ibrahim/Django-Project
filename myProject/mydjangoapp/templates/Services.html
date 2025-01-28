@@ -1,0 +1,285 @@
+
+{% load static %}
+{% load bootstrap3 %}
+{% bootstrap_messages %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Phone - Services</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        function Reply(form) 
+        {
+            alert("Thank you, Your request is now being processed")
+        }
+        function NavSearch() {
+            alert("Match not found")
+        }
+    </script>
+    
+    <style>
+        .bgtable
+        {
+            width: 100%;
+            background-color: rgba(0,0,0,0.85);
+            color: white;
+        }
+        body
+        {
+            background-attachment: fixed;
+            background-size: cover;
+            background-image: url({% static '/images/background.png' %});
+        }
+        .rempad
+        {
+            padding: 0%;
+            margin: 0%;
+        }
+        a
+        {
+            color: rgb(255, 255, 255);
+        }
+        .formtable
+        {
+            display: inline-flex;
+        }
+    </style>
+
+    <style>
+        .barpad
+        {
+            padding-left: 10px;
+        }
+        .navhead
+        {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            display: inline-flex;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .navhead:hover
+        {
+            color: white;
+        }
+        .navlink
+        {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            display: inline-flex;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .navlink:hover
+        {
+            color: gray;
+        }
+        .navbar
+        {
+            width: 100%;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 1);
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            display: inline-flex;
+            padding-bottom: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navsearch
+        {
+            height: 20px;
+            width: 120px;
+            position: absolute;
+            right: 65px;
+            top: 34%;
+        }
+        .navimg
+        {
+            height: 20px;
+            width: 20px;
+            padding: 0%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            visibility: visible;
+        }
+        .navbutton
+        {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            right: 30px;
+            top: 35%;
+            visibility: hidden;
+        }
+    </style>
+    <style>
+        .form-group label {
+            font-size: 16px;
+            color: #ffffff;
+            padding: 10px;
+        }
+        .form-control {
+            background-color: #f8f8f8;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            max-height: 150px;
+        }
+        .form-control:focus {
+            background-color: #fff;
+            box-shadow: none;
+            outline: none;
+        }
+        .btn-primary {
+            color: black;
+            background-color: #ffffff;
+            border-color: #000000;
+            border-radius: 0;
+        }
+        .btn-primary:hover {
+            background-color: #525252;
+            border-color: #000000;
+        }
+    </style>
+
+</head>
+<body >
+
+
+    <!-- Main Body starts here -->
+    <table class="bgtable">
+        <tr class="rempad"><td class="rempad">
+
+        <table class="navbar">
+        <tr><td class="barpad">
+            <a class="navhead" href="{% url 'Homepage' %}"><h2>One Phone</h2></a>
+            <a class="navlink" href="{% url 'Catalogue' %}">Catalogue</a>
+            <a class="navlink" href="{% url 'Services' %}">Services</a>
+            <a class="navlink" href="{% url 'Cart' %}">Cart</a>
+            <a class="navlink" href="{% url 'Aboutus' %}">About us</a>
+            <button class="navbutton" onclick="NavSearch()"><img class="navimg" src="{% static '/images/search icon.png' %}"></button>
+            <input class="navsearch" type="text">
+        </td></tr>  
+        </table>
+
+        <table align="center" style="width: 95%;">
+        <tr><td>
+        
+    
+    
+        <br>
+        <br>
+        <h2>Services we expect to provide you</h2>
+        <br>
+        <table class="formtable" style="width: 100%;">
+        <tr><td style="width: 100%;">
+        <ol>
+            <h5><li>
+                Screen repairs:
+            </li></h5>
+            <ul>
+                <li>Cracked or shattered screens</li>
+                <li>Fixing unresponsive touchscreens</li>
+                <li>Repairing or replacing malfunctioning display units (LCD, OLED)</li>
+            </ul>
+    
+            <br><br>
+    
+            <h5><li>
+                Battery replacement:
+            </li></h5>
+            <ul>
+                <li>Replacing old or damaged batteries</li>
+                <li>Addressing battery drainage issues</li>
+            </ul>
+    
+            <br><br>
+    
+            <h5><li>
+                Charging port repairs:
+            </li></h5>
+            <ul>
+                <li>Fixing or replacing damaged charging ports</li>
+                <li>Cleaning or repairing charging port obstructions</li>
+            </ul>
+            
+            <br><br>
+    
+            <h5><li>
+                Camera/Sensor repair:
+            </li></h5>
+            <ul>
+                <li>Replacing or repairing front and rear cameras</li>
+                <li>Fixing camera lens issues</li>
+                <li>Addressing camera focus or quality problems</li>
+                <li>Fixing or replacing biometric sensors</li>
+            </ul>
+            
+            <br><br>
+    
+            <h5><li>
+                Software troubleshooting:
+            </li></h5>
+            <ul>
+                <li>Fixing software issues, such as freezing, crashes, or glitches</li>
+                <li>Removing malware or viruses</li>
+                <li>Updating operating systems</li>
+            </ul>
+            
+            <br><br>
+    
+            <h5><li>
+                Data recovery:
+            </li></h5>
+            <ul>
+                <li>Recovering lost or deleted data</li>
+                <li>Transferring data to new devices</li>
+            </ul>
+            
+            <br><br>
+    
+            <h5><li>
+                Other general repairs:
+            </li></h5>
+            <ul>
+                <li>Water Damage Repair</li>
+                <li>Speaker and Microphone Repairs</li>
+                <li>Button Repairs</li>
+                <li>Antenna and Signal Issues</li>
+                <li>Housing and Frame Replacement</li>
+                <li>Other Accessory Repairs</li>
+            </ul>
+        </ol>
+        </td>
+        <td style="position: fixed; right: 10% ; top: 15%; width: 40%;">
+            <form onsubmit="Reply()" action="" method="post"><input type='hidden'/>
+                {%csrf_token %}
+                {% bootstrap_form form %}
+                <br>
+                <input type="submit" value="submit" class="btn-primary">
+            </form>
+        </td>
+        </tr>
+        </table>
+    
+        <br><br>
+    
+
+    
+        </td></tr>
+        </table>  
+        </td></tr>
+        </table>
+    <!-- Main body ends here-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

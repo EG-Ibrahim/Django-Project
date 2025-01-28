@@ -1,0 +1,426 @@
+
+{% load static %}
+{% load bootstrap3 %}
+{% bootstrap_messages %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Phone</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script>
+        function Reply(form) 
+        {
+            alert("Thank you, Your request is now being processed")
+        }
+        function NavSearch() {
+            alert("Match not found")
+        }
+    </script>
+
+    <style>
+        button{
+            border: none;
+            cursor: pointer;
+            color: white;
+            background: none;
+            transition: all .3s ease-in-out;
+        }
+    
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .carousel-view {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 44px 0;
+            transition: all 0.25s ease-in;
+        }
+    
+        .carousel-view .item-list {
+            max-width: 950px;
+            width: 70vw;
+            padding: 50px 10px;
+            display: flex;
+            gap: 48px;
+            scroll-behavior: smooth;
+            transition: all 0.25s ease-in;
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+            overflow: auto;
+            scroll-snap-type: x mandatory;
+        }
+    
+    
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .item-list::-webkit-scrollbar {
+            display: none;
+        }
+    
+        .prev-btn {
+            cursor: pointer;
+        }
+    
+        .next-btn {
+            cursor: pointer;
+        }
+    
+        .item {
+            scroll-snap-align: center;
+            min-width: 300px;
+            height: 250px;
+            background-color: white;
+            border-radius:8px;
+        }
+    </style>
+
+    <!-- 235, 255, 121    235,253,137, 0.95 -->
+
+
+    <style>
+        .bgtable
+        {
+            width: 100%;
+            background-color: rgba(0,0,0,0.6);
+        }
+        body
+        {
+            background-attachment: fixed;
+            background-size: cover;
+            background-image: url({% static '/images/background.png' %});
+        }
+        h1
+        {
+            background-color: rgba(0, 0, 0, 0.95);
+            color: white;
+        }
+        .rempad
+        {
+            padding: 0%;
+            margin: 0%;
+        }
+        .padder
+        {
+            padding: 30px;
+        }
+        .table1
+        {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+        .table2
+        {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 1);
+            color: white;
+        }
+        .link1
+        {
+            color: rgb(255, 255, 0);
+        }
+    </style>
+
+    <style>
+        .barpad
+        {
+            padding-left: 10px;
+        }
+        .navhead
+        {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            display: inline-flex;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .navhead:hover
+        {
+            color: white;
+        }
+        .navlink
+        {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            display: inline-flex;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .navlink:hover
+        {
+            color: gray;
+        }
+        .navbar
+        {
+            width: 100%;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            display: inline-flex;
+            padding-bottom: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navsearch
+        {
+            height: 20px;
+            width: 120px;
+            position: absolute;
+            right: 65px;
+            top: 34%;
+        }
+        .navimg
+        {
+            height: 20px;
+            width: 20px;
+            padding: 0%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            visibility: visible;
+        }
+        .navbutton
+        {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            right: 30px;
+            top: 35%;
+            visibility: hidden;
+        }
+    </style>
+    <style>
+        .form-group label {
+            font-size: 16px;
+            color: #ffffff;
+            padding: 10px;
+        }
+        .form-control {
+            background-color: #f8f8f8;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            max-height: 150px;
+        }
+        .form-control:focus {
+            background-color: #fff;
+            box-shadow: none;
+            outline: none;
+        }
+        .btn-primary {
+            color: black;
+            background-color: #ffffff;
+            border-color: #000000;
+            border-radius: 0;
+        }
+        .btn-primary:hover {
+            background-color: #525252;
+            border-color: #000000;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Main Body starts here -->
+    <table class="bgtable">
+    <tr class="rempad"><td class="rempad">
+
+    <h1 align="center" style="margin-bottom: 0%; padding: 10px;">One Phone</h1>
+
+    <table class="navbar">
+        <tr><td class="barpad">
+            <a class="navhead" href="{% url 'Homepage' %}"><h2>One Phone</h2></a>
+            <a class="navlink" href="{% url 'Catalogue' %}">Catalogue</a>
+            <a class="navlink" href="{% url 'Services' %}">Services</a>
+            <a class="navlink" href="{% url 'Cart' %}">Cart</a>
+            <a class="navlink" href="{% url 'Aboutus' %}">About us</a>
+            <button class="navbutton" onclick="NavSearch()"><img class="navimg" src="{% static '/images/search icon.png' %}"></button>
+            <input class="navsearch" type="text">
+        </td></tr>  
+    </table>
+
+
+    <table align="center" style="width: 95%;">
+    <tr class="rempad"><td class="rempad">
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <table class="table1">
+        <tr>
+            <td width="1000" class="padder">
+                <h3>All your phone needs in one location</h3>
+                <br>
+                We have a wide selection of Smartphones to choose from.
+                Which means all your Smartphones need can be fullfilled from one location. 
+                <br><br>
+                You can browse our Catalogue by clicking 'Catalogue' in the navigation bar or by clicking <a class="link1" href="{% url 'Catalogue' %}">here</a>
+                <br><br><br>
+            </td>
+            <td width="1000">
+                <img src="{% static '/images/SamsungS24.png' %}" align="right" width="800">
+            </td>
+        </tr>
+    </table>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <table class="table1">
+        <tr>
+            <td width="750">
+                <img src="{% static '/images/Fixing.png' %}" align="left" width="650">
+            </td>
+            <td width="1000">
+                <h3>Services that improve longevity</h3>
+                <br>
+                Our after market services are the best in the game.<br>
+                We offer cheap and proper repairs that aim to improve the longevity your Smartphones.
+                <br><br>
+                You can check our Services by clicking 'Services' in the navigation bar or by clicking <a class="link1" href="{% url 'Services' %}">here</a>
+                <br><br><br><br><br><br><br><br>
+            </td>
+        </tr>
+    </table>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <table class="table1">
+        <tr>
+            <td width="750" class="padder">
+                <h3>Buy straight from our website</h3>
+                <br>
+                Our website supports online transactions.
+                We can either deliver directly to you or you can pick up from one of our stores.
+                <br><br>
+                You can check out the Cart by clicking 'Cart' in the navigation bar or by clicking <a class="link1" href="{% url 'Cart' %}">here</a>
+                <br><br><br><br><br><br>
+            </td>
+            <td width="1000">
+                <img src="{% static '/images/happy.png' %}" align="right" width="750">
+                
+            </td>
+        </tr>
+    </table>
+
+    </td></tr>
+    </table>
+    
+    <br><br><br><br>
+
+    <table class="table1" style="width: 100%;">
+    <tr><td>
+    <h1 align="center" style="background-color: transparent; padding-top: 30px;">A few of our popular products</h1>
+    <div class="container">
+        <div class="carousel-view">
+        <button id="prev-btn" class="prev-btn">
+        <svg viewBox="0 0 512 512" width="60" title="chevron-circle-left">
+        <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" fill="#ffffff"/>
+    </svg>
+        </button>
+        <div id="item-list" class="item-list">
+            <img id="item" class="item" src="{% static '/images/SamsungS24ultra.png' %}"/>
+            <img id="item" class="item" src="{% static '/images/Samsung Z Fold5.png' %}"/>
+            <img id="item" class="item" src="{% static '/images/Huawei mate50pro.png' %}"/>
+            <img id="item" class="item" src="{% static '/images/Huawei mate x3.png' %}"/>
+            <img id="item" class="item" src="{% static '/images/IPhone 15 Pro Max.png' %}"/>
+            <img id="item" class="item" src="{% static '/images/IPhone 15 Pro.png' %}"/>
+            <img id="item" class="item" src="{% static '/images/Xiaomi 14 Ultra.png' %}"/>
+            <img id="item" class="item" src="{% static '/images/Xiaomi Redmi Note 14 Pro.png' %}"/>
+            <img id="item" class="item" src="{% static '/images/Galaxy Watch 4.png' %}"/>
+            <img id="item" class="item" src="{% static '/images/earbuds.png' %}"/>
+            </div>
+        <button id="next-btn" class="next-btn">
+        <svg viewBox="0 0 512 512" width="60" title="chevron-circle-right">
+        <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" fill="#ffffff" />
+    </svg>
+            </button>
+        </div>
+    </div>
+    </td></tr> 
+    </table>
+
+    <br><br><br><br>
+
+
+    <table class="table2">
+        <tr>
+            <td width="45%" class="padder">
+                <br><br><br>
+                <h3>Contact us</h3>
+                
+                <br> <h6>You can either contact us through these:</h6>
+                <br> <b>Tel no:</b> +971 6 123 9876
+                <br> <b>Mobile no:</b> +971 50 987 1234
+                <br> <b>E-mail:</b> csupport@onep.com
+                
+                <br><br><h6>Or you can use one of our forms to request our services directly</h6>
+                <br>
+                <br>            
+                <br>
+            </td>
+            <td>
+                <br><br><br>
+                <form onsubmit="Reply()" action="" method="post" style="width: 70%;"><input type='hidden'/>
+                    {%csrf_token %}
+                    {% bootstrap_form form %}
+                    <br>
+                    <input type="submit" value="submit" class="btn-primary">
+                </form>
+                <br><br><br>
+            </td>
+        </tr>
+    </table>
+
+    </td></tr>
+    </table>   
+
+    <!-- Main body ends here-->
+
+    <script>
+
+        const prev = document.getElementById('prev-btn')
+        const next = document.getElementById('next-btn')
+        const list = document.getElementById('item-list')
+        
+        const itemWidth = 300
+        const padding = 10
+        
+        prev.addEventListener('click',()=>{
+          list.scrollLeft -= itemWidth + padding
+        })
+        
+        next.addEventListener('click',()=>{
+          list.scrollLeft += itemWidth + padding
+        })
+        
+          
+    </script>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

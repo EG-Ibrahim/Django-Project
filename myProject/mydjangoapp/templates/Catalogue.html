@@ -1,0 +1,626 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Phone - Catalogue</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+
+        function NavSearch() {
+            alert("Match not found")
+        }
+        
+
+
+        function closeimg1() {
+            var img = document.getElementById("image1");
+            img.classList.replace("visimg", "noimg");
+            var closebut = document.getElementById("closebut1");
+            closebut.classList.replace("visbut", "nobut"); 
+        }
+        function Change1(src) {
+            document.getElementById('image1').src = src;
+            var img = document.getElementById("image1");
+            img.classList.replace("noimg", "visimg");
+            var closebut = document.getElementById("closebut1");
+            closebut.classList.replace("nobut", "visbut");
+        }
+
+        function closeimg1_1() {
+            var img = document.getElementById("image11");
+            img.classList.replace("visimg", "noimg");
+            var closebut = document.getElementById("closebut11");
+            closebut.classList.replace("visbut", "nobut"); 
+        }
+        function Change1_1(src) {
+            document.getElementById('image11').src = src;
+            var img = document.getElementById("image11");
+            img.classList.replace("noimg", "visimg");
+            var closebut = document.getElementById("closebut11");
+            closebut.classList.replace("nobut", "visbut");
+        }
+        
+
+
+        function closeimg2() {
+            var img = document.getElementById("image2");
+            img.classList.replace("visimg", "noimg");
+            var closebut = document.getElementById("closebut2");
+            closebut.classList.replace("visbut", "nobut"); 
+        }
+        function Change2(src) {
+            document.getElementById('image2').src = src;
+            var img = document.getElementById("image2");
+            img.classList.replace("noimg", "visimg");
+            var closebut = document.getElementById("closebut2");
+            closebut.classList.replace("nobut", "visbut");
+        }
+
+        function closeimg2_2() {
+            var img = document.getElementById("image22");
+            img.classList.replace("visimg", "noimg");
+            var closebut = document.getElementById("closebut22");
+            closebut.classList.replace("visbut", "nobut"); 
+        }
+        function Change2_2(src) {
+            document.getElementById('image22').src = src;
+            var img = document.getElementById("image22");
+            img.classList.replace("noimg", "visimg");
+            var closebut = document.getElementById("closebut22");
+            closebut.classList.replace("nobut", "visbut");
+        }
+
+
+
+        function closeimg3() {
+            var img = document.getElementById("image3");
+            img.classList.replace("visimg", "noimg");
+            var closebut = document.getElementById("closebut3");
+            closebut.classList.replace("visbut", "nobut"); 
+        }
+        function Change3(src) {
+            document.getElementById('image3').src = src;
+            var img = document.getElementById("image3");
+            img.classList.replace("noimg", "visimg");
+            var closebut = document.getElementById("closebut3");
+            closebut.classList.replace("nobut", "visbut");
+        }
+
+        function closeimg3_3() {
+            var img = document.getElementById("image33");
+            img.classList.replace("visimg", "noimg");
+            var closebut = document.getElementById("closebut33");
+            closebut.classList.replace("visbut", "nobut"); 
+        }
+        function Change3_3(src) {
+            document.getElementById('image33').src = src;
+            var img = document.getElementById("image33");
+            img.classList.replace("noimg", "visimg");
+            var closebut = document.getElementById("closebut33");
+            closebut.classList.replace("nobut", "visbut");
+        }
+
+
+
+        function closeimg4() {
+            var img = document.getElementById("image4");
+            img.classList.replace("visimg", "noimg");
+            var closebut = document.getElementById("closebut4");
+            closebut.classList.replace("visbut", "nobut"); 
+        }
+        function Change4(src) {
+            document.getElementById('image4').src = src;
+            var img = document.getElementById("image4");
+            img.classList.replace("noimg", "visimg");
+            var closebut = document.getElementById("closebut4");
+            closebut.classList.replace("nobut", "visbut");
+        }
+
+        function closeimg4_4() {
+            var img = document.getElementById("image44");
+            img.classList.replace("visimg", "noimg");
+            var closebut = document.getElementById("closebut44");
+            closebut.classList.replace("visbut", "nobut"); 
+        }
+        function Change4_4(src) {
+            document.getElementById('image44').src = src;
+            var img = document.getElementById("image44");
+            img.classList.replace("noimg", "visimg");
+            var closebut = document.getElementById("closebut44");
+            closebut.classList.replace("nobut", "visbut");
+        }
+
+
+
+    </script>
+
+
+    <style>
+        .bgtable
+        {
+            width: 100%;
+            background-color: rgba(0,0,0,0.6);
+            padding: 0%;
+            margin: 0%;
+        }
+        body
+        {
+            background-attachment: fixed;
+            background-size: cover;
+            background-image: url({% static '/images/background.png' %});
+        }
+        .rempad
+        {
+            padding: 0%;
+            margin: 0%;
+        }
+        .nobut
+        {
+            height: 0px;
+            width: 0px;
+            color: white;
+            transition: 0.5s;
+        }
+        .nobut:hover
+        {color: white;}
+        .visbut
+        {
+            width: 5%;
+            height: 10%;
+            color: black;
+            background-color: lightcoral;
+            transition: 0.5s;
+        }
+        .visbut:hover
+        {
+            color: white;
+            box-shadow: 0 0 10px lightcoral;
+            transition: 0.5s;
+        }
+        .noimg
+        {
+            height: 0px;
+            width: 0px;
+            transition: 0.5s;
+        }
+        .visimg
+        {
+            height: 500px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .visimg:hover
+        {opacity: 100%;}
+        table
+        {
+            border-collapse: collapse;
+            text-align: center;
+            color: black;
+            width: 80%;
+            background-color: white;
+        }
+        a
+        {
+            color: rgb(0, 0, 0);
+        }
+        button
+        {
+            padding: 5px;
+            width: 50%;
+            color: gray;
+            background-color: transparent;
+            border-style: solid;
+            border: 0px;
+        }
+        button:hover
+        {
+            color: black;
+        }
+        hr
+        {
+            overflow: hidden;
+            position: relative;
+            color: black;
+            background-color: black;
+            border-color: black;
+        }
+        .imagecont
+        {
+            height: 250px;
+            object-fit: cover;
+            padding: 10px;
+            transition: 0.6s;
+        }
+        .imagecont:hover
+        {
+            height: 245px;
+            padding: 0px;
+            transition: 0.6s;
+        }
+    </style>
+
+<!-- img:hover 
+{filter: opacity(80%);} -->
+
+    <style>
+        .barpad
+        {
+            padding-left: 10px;
+        }
+        .navhead
+        {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            display: inline-flex;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .navhead:hover
+        {
+            color: white;
+        }
+        .navlink
+        {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            display: inline-flex;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .navlink:hover
+        {
+            color: gray;
+        }
+        .navbar
+        {
+            width: 100%;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            display: inline-flex;
+            padding-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navsearch
+        {
+            height: 20px;
+            width: 120px;
+            position: absolute;
+            right: 65px;
+            top: 34%;
+        }
+        .navimg
+        {
+            height: 20px;
+            width: 20px;
+            padding: 0%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            visibility: visible;
+        }
+        .navimg:hover
+        {
+            opacity: 80%;
+        }
+        .navbutton
+        {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            right: 30px;
+            top: 35%;
+            visibility: hidden;
+        }
+
+        .navbar-sec
+        {
+            width: 100%;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 1);
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            display: inline-flex;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <!-- Main Body starts here -->
+
+    <table class="bgtable" id="Catalogue">
+    <tr class="rempad"><td class="rempad">
+
+        <table class="navbar">
+            <tr><td class="barpad">
+                <a class="navhead" href="{% url 'Homepage' %}"><h2>One Phone</h2></a>
+                <a class="navlink" href="{% url 'Catalogue' %}">Catalogue</a>
+                <a class="navlink" href="{% url 'Services' %}">Services</a>
+                <a class="navlink" href="{% url 'Cart' %}">Cart</a>
+                <a class="navlink" href="{% url 'Aboutus' %}">About us</a>
+                <button class="navbutton" onclick="NavSearch()"><img class="navimg" src="{% static '/images/search icon.png' %}"></button>
+                <input class="navsearch" type="text">
+            </td></tr>  
+        </table>
+    </td></tr>
+    </table>
+
+        <table class="navbar-sec">
+            <tr><td class="barpad">
+                <a class="navhead" href="#Catalogue"><h2>Catalogue</h2></a>
+                <a class="navlink" href="#Phones">Phones</a>
+                <a class="navlink" href="#Accesories">Accesories</a>
+            </td></tr>
+        </table>
+    
+        <table style="width: 100%;" class="rempad">
+        <tr class="rempad"><td class="rempad">
+            
+            <br><br>
+            <br><br>
+    
+            <h1 id="Phones">Phones</h1>
+    
+            <br><br><hr style="height: 2px; border-width:0;">
+    
+            <table align="center">
+                <br>
+                <tr align="center"><h2 align="center">Samsung <br><br></h2></tr>
+                <tr> 
+                    <div>
+                        <img src="{% static '/images/SamsungS24ultra.png' %}" class="noimg" id="image1">
+                    </div>
+                    <button onclick="closeimg1()" class="nobut" id="closebut1">Close</button>
+                </tr>
+                <tr>
+                    <td align="center" width="25%"><img onclick="Change1(this.src)" class="imagecont" src="{% static '/images/SamsungS24ultra.png' %}"></td>
+                    <td align="center" width="25%"><img onclick="Change1(this.src)" class="imagecont" src="{% static '/images/SamsungS24m.png' %}"></td>
+                    <td align="center" width="25%"><img onclick="Change1(this.src)" class="imagecont" src="{% static '/images/SamsungA55.png' %}"></td>
+                    <td align="center" width="25%"><img onclick="Change1(this.src)" class="imagecont" src="{% static '/images/Samsung Z Fold5.png' %}"></td>
+                </tr>
+                <tr>
+                    <td align="center" width="25%">Samsung S24 Ultra </td>
+                    <td align="center" width="25%">Samsung S24 </td>
+                    <td align="center" width="25%">Samsung A55 </td>
+                    <td align="center" width="25%">Samsung Z Fold 5 </td>
+                </tr>
+                <tr>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                </tr>
+            </table>
+    
+            <br><br><hr style=" height: 2px;  border-width:0;">
+    
+            <table align="center">
+                <br>
+                <tr align="center"><h2 align="center">Huawei <br><br></h2></tr>
+                <tr>
+                    <div>
+                        <img src="{% static '/images/SamsungS24ultra.png' %}" class="noimg" id="image2">
+                    </div>
+                    <button onclick="closeimg2()" class="nobut" id="closebut2">Close</button>
+                </tr>
+                <tr>
+                    <td align="center" width="25%"><img onclick="Change2(this.src)" class="imagecont" src="{% static '/images/Huawei P70 Ultra.png' %}"></td>
+                    <td align="center" width="25%"><img onclick="Change2(this.src)" class="imagecont" src="{% static '/images/Huawei mate50pro.png' %}"></td>
+                    <td align="center" width="25%"><img onclick="Change2(this.src)" class="imagecont" src="{% static '/images/Huawei Nova7i.png' %}"></td>
+                    <td align="center" width="25%"><img onclick="Change2(this.src)" class="imagecont" src="{% static '/images/Huawei mate x3.png' %}"></td>
+                </tr>
+                <tr>
+                    <td align="center" width="25%"><br>Huawei P70 Ultra</td>
+                    <td align="center" width="25%"><br>Huawei Mate 50 pro </td>
+                    <td align="center" width="25%"><br>Huawei Nova 7i </td>
+                    <td align="center" width="25%"><br>Huawei Mate X3 </td>
+                </tr>
+                <tr>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                </tr>
+            </table>
+
+            <br><br><hr style=" height: 2px;  border-width:0;">
+    
+            <table align="center">
+                <br>
+                <tr align="center"><h2 align="center">Apple <br><br></h2></tr>
+                <tr>
+                    <div>
+                        <img src="{% static '/images/SamsungS24ultra.png' %}" class="noimg" id="image3">
+                    </div>
+                    <button onclick="closeimg3()" class="nobut" id="closebut3">Close</button>
+                </tr>
+                <tr>
+                    <td align="center" width="25%"><img onclick="Change3(this.src)" class="imagecont" src="{% static '/images/IPhone 14 Pro Max.png' %}"></td>
+                    <td align="center" width="25%"><img onclick="Change3(this.src)" class="imagecont" src="{% static '/images/IPhone 15.png' %}"></td>
+                    <td align="center" width="25%"><img onclick="Change3(this.src)" class="imagecont" src="{% static '/images/IPhone 15 Pro.png' %}"></td>
+                    <td align="center" width="25%"><img onclick="Change3(this.src)" class="imagecont" src="{% static '/images/IPhone 15 Pro Max.png' %}"></td>
+                </tr>
+                <tr>
+                    <td align="center" width="25%"><br>IPhone 14 Pro Max </td>
+                    <td align="center" width="25%"><br>IPhone 15 </td>
+                    <td align="center" width="25%"><br>IPhone 15 Pro </td>
+                    <td align="center" width="25%"><br>IPhone 15 Pro Max </td>
+                </tr>
+                <tr>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                </tr>
+            </table>
+
+            <br><br><hr style=" height: 2px;  border-width:0;">
+    
+            <table align="center">
+                <br>
+                <tr align="center"><h2 align="center">Xiaomi <br><br></h2></tr>
+                <tr>
+                    <div>
+                        <img src="{% static '/images/SamsungS24ultra.png' %}" class="noimg" id="image4">
+                    </div>
+                    <button onclick="closeimg4()" class="nobut" id="closebut4">Close</button>
+                </tr>
+                <tr>
+                    <td align="center" width="25%"><img onclick="Change4(this.src)" class="imagecont" src="{% static '/images/Xiaomi 14 Ultra.png' %}"></td>
+                    <td align="center" width="25%"><img onclick="Change4(this.src)" class="imagecont" src="{% static '/images/Xiaomi Mi 11.png' %}"></td>
+                    <td align="center" width="25%"><img onclick="Change4(this.src)" class="imagecont" src="{% static '/images/Xiaomi Mi 11 Pro.png' %}"></td>
+                    <td align="center" width="25%"><img onclick="Change4(this.src)" class="imagecont" src="{% static '/images/Xiaomi Redmi Note 14 Pro.png' %}" width="210px"></td>
+                </tr>
+                <tr>
+                    <td align="center" width="25%"><br>Xiaomi 14 Ultra </td>
+                    <td align="center" width="25%"><br>Xiaomi Mi 11 </td>
+                    <td align="center" width="25%"><br>Xiaomi Mi 11 Pro </td>
+                    <td align="center" width="25%"><br>Xiaomi Redmi Note 14 Pro </td>
+                </tr>
+                <tr>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                    <td align="center" width="25%"><hr width="80%"></td>
+                </tr>
+            </table>
+    
+            <br><br><hr style="height: 3px; border-width:0;">
+    
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+    
+            <h1 id="Accesories">Accesories</h1>
+    
+            <br><br><hr style="height: 2px; border-width:0;">
+    
+            <table align="center">
+                <br>
+                <tr align="center"><h2 align="center">Samsung <br><br></h2></tr>
+                <tr>
+                    <div>
+                        <img src="{% static '/images/SamsungS24ultra.png' %}" class="noimg" id="image11">
+                    </div>
+                    <button onclick="closeimg1_1()" class="nobut" id="closebut11">Close</button>
+                </tr>
+                <tr>
+                    <td align="center" width="50%"><img onclick="Change1_1(this.src)" class="imagecont" src="{% static '/images/Galaxy Watch 4.png' %}"></td>
+                    <td align="center" width="50%"><img onclick="Change1_1(this.src)" class="imagecont" src="{% static '/images/earbuds.png' %}"></td>
+                </tr>
+                <tr>
+                    <td align="center" width="50%">Galaxy Watch 4 </td>
+                    <td align="center" width="50%">Samsung GalaxyBuds </td>
+                </tr>
+                <tr>
+                    <td align="center" width="50%"><hr width="80%"></td>
+                    <td align="center" width="50%"><hr width="80%"></td>
+                </tr>
+            </table>
+    
+            <br><br><hr style="height: 2px; border-width:0;">
+    
+            <table align="center">
+                <br>
+                <tr align="center"><h2 align="center">Huawei <br><br></h2></tr>
+                <tr>
+                    <div>
+                        <img src="{% static '/images/SamsungS24ultra.png' %}" class="noimg" id="image22">
+                    </div>
+                    <br>
+                    <button onclick="closeimg2_2()" class="nobut" id="closebut22">Close</button>
+                </tr>
+                <tr>
+                    <td align="center" width="50%"><img onclick="Change2_2(this.src)" class="imagecont" src="{% static '/images/Huawei GT3pro.png' %}"></td>
+                    <td align="center" width="50%"><img onclick="Change2_2(this.src)" class="imagecont" src="{% static '/images/Huawei buds 4i.png' %}"></td>
+                </tr>
+                <tr>
+                    <td align="center" width="50%">Huawei GT3 pro </td>
+                    <td align="center" width="50%">Huawei Buds 4i </td>
+                </tr>
+                <tr>
+                    <td align="center" width="50%"><hr width="80%"></td>
+                    <td align="center" width="50%"><hr width="80%"></td>
+                </tr>
+            </table>
+            
+            <br><br><hr style="height: 2px; border-width:0;">
+    
+            <table align="center">
+                <br>
+                <tr align="center"><h2 align="center">Apple <br><br></h2></tr>
+                <tr>
+                    <div>
+                        <img src="{% static '/images/SamsungS24ultra.png' %}" class="noimg" id="image33">
+                    </div>
+                    <br>
+                    <button onclick="closeimg3_3()" class="nobut" id="closebut33">Close</button>
+                </tr>
+                <tr>
+                    <td align="center" width="50%"><img onclick="Change3_3(this.src)" class="imagecont" src="{% static '/images/Apple Watch 7.png' %}"></td>
+                    <td align="center" width="50%"><img onclick="Change3_3(this.src)" class="imagecont" src="{% static '/images/Airpods 3rd Gen.png' %}"></td>
+                </tr>
+                <tr>
+                    <td align="center" width="50%">Apple Watch 7 </td>
+                    <td align="center" width="50%">Airpods 3rd Gen </td>
+                </tr>
+                <tr>
+                    <td align="center" width="50%"><hr width="80%"></td>
+                    <td align="center" width="50%"><hr width="80%"></td>
+                </tr>
+            </table>
+ 
+            <br><br><hr style="height: 2px; border-width:0;">
+    
+            <table align="center">
+                <br>
+                <tr align="center"><h2 align="center">Xiaomi <br><br></h2></tr>
+                <tr>
+                    <div>
+                        <img src="{% static '/images/SamsungS24ultra.png' %}" class="noimg" id="image44">
+                    </div>
+                    <br>
+                    <button onclick="closeimg4_4()" class="nobut" id="closebut44">Close</button>
+                </tr>
+                <tr>
+                    <td align="center" width="50%"><img onclick="Change4_4(this.src)" class="imagecont" src="{% static '/images/Xiaomi Watch 2 Pro.png' %}"></td>
+                    <td align="center" width="50%"><img onclick="Change4_4(this.src)" class="imagecont" src="{% static '/images/Xiaomi Redmi Buds 5 Pro.png' %}"></td>
+                </tr>
+                <tr>
+                    <td align="center" width="50%">Xiaomi Watch 2 Pro </td>
+                    <td align="center" width="50%">Xiaomi Redmi Buds 5 Pro </td>
+                </tr>
+                <tr>
+                    <td align="center" width="50%"><hr width="80%"></td>
+                    <td align="center" width="50%"><hr width="80%"></td>
+                </tr>
+            </table>
+ 
+            <br><br><hr style="height: 3px; border-width:0;">
+    
+            <br><br><br><br>
+            <br><br><br><br>
+    
+    </td></tr>
+    </table>
+
+    <!-- Main body ends here-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
