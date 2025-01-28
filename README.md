@@ -3,7 +3,7 @@ There are a few certain things that need to be done to view this project properl
 
 For Django set up: 
 ( $ python -m pip install Django ) 
-(I recommend looking up how to set up Django instead) 
+(Although I recommend looking up how to set up Django instead) 
 
 And set up for additional tools I used that may be needed: 
 
